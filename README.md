@@ -1,7 +1,7 @@
 # Covid19 Data Pipeline on Databricks
 Data Pipeline of Covid19 on Databricks  
 
-Creating a Data Pipeline for Covid data from a git repository of ![JHU CSSE](https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/) were Covid19 cases are daily reported. The current pipeline is created in Databricks and transformed data is loaded in DBFS file system. The pipeline is build in a community version of Databricks thus 1master and 1worker node. 
+Creating a Data Pipeline for Covid data from a git repository of ![JHU CSSE](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_daily_reports) were Covid19 cases are daily reported. The current pipeline is created in Databricks and transformed data is loaded in DBFS file system. The pipeline is build in a community version of Databricks thus 1master and 1worker node. 
 
 The daily reports file are downloaded in batches from Git repo to a local file system in databricks - 
 ![](images/Recent_ExtractedFilesFromGit.png) 
