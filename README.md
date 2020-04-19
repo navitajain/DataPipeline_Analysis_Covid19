@@ -6,11 +6,15 @@ Creating a Data Pipeline for Covid data from a git repository of ![https://raw.g
 The Git repo from were we str daily records are updated is of form - 
 The data is stream from Git repo to a local file system in databricks - 
 ![](Recent_ExtractedFilesFromGit.png) 
+
+
 Each daily records file contains data like - 
 ![](DailyReports_16April_FromGit.png)
 
+
 The pipeline ETLs loads data in DBFS filesystem in  Delta format, into three category files for Confirmed, Deaths, Recovered cases and a log file that works as a transaction log. Below is a view of DBFS filesystem where data is loaded in different category files- 
 ![](DBFS_fs.png)
+
 
 The use of Delta Lake made merging the new column/schema super easy, as the data is stored in a time-series fashion (@columns are dates). So, each day a new column is merged into existing delta table. Below is snapshot of the Covid Confirmed data
 ![](images/Snapshot_CovidConfirmedFile.png)
